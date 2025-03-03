@@ -1,0 +1,637 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>CarVilla</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!--linear icon css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+
+        <!--flaticon.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+
+        <!--animate.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+        
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        
+        <!-- bootsnav -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootsnav.css') }}">
+
+        <!--style.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+        
+
+    </head>
+	
+	<body>
+		
+	
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
+
+			<!-- top-area Start -->
+			<div class="top-area">
+				<div class="header-area">
+					<!-- Start Navigation -->
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+				        <div class="container">
+
+				            <!-- Start Header Navigation -->
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				                    <i class="fa fa-bars"></i>
+				                </button>
+				                <a class="navbar-brand" href="{{ url_for('index') }}"><br><br><span></span></a>
+
+				            </div><!--/.navbar-header-->
+				            <!-- End Header Navigation -->
+
+				            <!-- Collect the nav links, forms, and other content for toggling -->
+				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+				                    <li class=" scroll active"><a href="#home">home</a></li>
+				                    <li class="scroll"><a href="#service">service</a></li>
+				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
+				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
+				                    <li class="scroll"><a href="#brand">brands</a></li>
+				                    <li class="scroll"><a href="#contact">contact</a></li>
+				                </ul><!--/.nav -->
+				            </div><!-- /.navbar-collapse -->
+				        </div><!--/.container-->
+				    </nav><!--/nav-->
+				    <!-- End Navigation -->
+				</div><!--/.header-area-->
+			    <div class="clearfix"></div>
+
+			</div><!-- /.top-area-->
+			<!-- top-area End -->
+
+			<div class="container">
+				<div class="welcome-hero-txt">
+					<h2>choose your dream car</h2>
+					<p>
+						Explore a wide range of luxury, sports, and family cars that match your style and needs. Find the perfect ride for your next adventure.
+					</p>
+					
+					<button class="welcome-btn" onclick="window.location.href='/predict'">Prediction</button>
+				</div>
+			</div>
+
+			
+
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+		<!-- Service Start -->
+<section id="service" class="service">
+    <div class="container">
+        <div class="service-content">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-item">
+                        <div class="single-service-icon">
+							<img src="{{ url_for('static', filename='images/icons/car.png') }}" 
+                            alt="AI Car Price Estimation" 
+                            width="50" height="50">
+
+
+                        </div>
+                        <h2><a href="#">AI <span>Car Price</span> Estimation</a></h2>
+                        <p>
+                            Get accurate car price predictions using advanced machine learning algorithms. Analyze historical and real-time data for the best price insights.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-item">
+                        <div class="single-service-icon">
+							<img src="{{ url_for('static', filename='images/icons/market trend.webp') }}" 
+                            alt="Market Trend Analysis" 
+                            width="50" height="50">
+                        </div>
+                        <h2><a href="#">Market Trend <span>Analysis</span></a></h2>
+                        <p>
+                            Understand how car prices fluctuate over time with AI-based market trend analysis. Stay ahead with real-time price <br>tracking.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-service-item">
+                        <div class="single-service-icon">
+                            <img src="{{ url_for('static', filename='images/icons/car prediction.png') }}" 
+                            alt="Car Value Prediction" 
+                            width="50" height="50">
+                        </div>
+                        <h2><a href="#">Car Value <span>Prediction</span></a></h2>
+                        <p>
+                            Enter car details and predict its future resale value. Our AI system evaluates depreciation rates and market demand to provide accurate insights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.container-->
+</section><!--/.service-->
+<!-- Service End -->
+
+
+		<!--new-cars start -->
+		<section id="new-cars" class="new-cars">
+			<div class="container">
+				<div class="section-header">
+					<h2>newest cars</h2>
+				</div><!--/.section-header-->
+				<div class="new-cars-content">
+					<div class="owl-carousel owl-theme" id="new-cars-carousel">
+						<div class="new-cars-item">
+							<div class="single-new-cars-item">
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="new-cars-img">
+											<img src="/static/images/new-cars-model/ncm4.png" alt="img"/>
+										</div><!--/.new-cars-img-->
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="new-cars-txt">
+											<h2><a href="#">Toyota Corolla <span> SE </span></a></h2>
+        <p>
+            Experience the perfect blend of comfort, efficiency, and advanced safety features with the Toyota Corolla SE 2023. This sleek sedan is designed for smooth city drives and long highway journeys.
+        </p>
+        <p class="new-cars-para2">
+            Equipped with modern technology and a stylish interior, the Corolla ensures a premium driving experience while maintaining top-tier fuel efficiency.
+        </p>
+											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
+												view details
+											</button>
+										</div><!--/.new-cars-txt-->	
+									</div><!--/.col-->
+								</div><!--/.row-->
+							</div><!--/.single-new-cars-item-->
+						</div><!--/.new-cars-item-->
+						<div class="new-cars-item">
+							<div class="single-new-cars-item">
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="new-cars-img">
+											<img src="/static/images/new-cars-model/ncm2.png" alt="img"/>
+										</div><!--/.new-cars-img-->
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="new-cars-txt">
+											<h2><a href="#">Mercedes-Benz E-Class <span></span></a></h2>
+        <p>
+            The Mercedes-Benz E-Class 2024 offers a luxurious driving experience with cutting-edge technology, supreme comfort, and outstanding performance, making every journey a pleasure.
+        </p>
+        <p class="new-cars-para2">
+            Designed with elegance and innovation, this premium sedan delivers a smooth ride, top-tier safety features, and a sophisticated interior crafted for excellence.
+        </p>
+											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
+												view details
+											</button>
+										</div><!--/.new-cars-txt-->	
+									</div><!--/.col-->
+								</div><!--/.row-->	
+							</div><!--/.single-new-cars-item-->
+						</div><!--/.new-cars-item-->
+						<div class="new-cars-item">
+							<div class="single-new-cars-item">
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="new-cars-img">
+											<img src="/static/images/new-cars-model/ncm1.png" alt="img"/>
+										</div><!--/.new-cars-img-->
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="new-cars-txt">
+											<h2><a href="#">Hyundai Elantra <span> 2023</span></a></h2>
+        <p>
+            The Hyundai Elantra 2023 offers a sleek design, advanced technology, and outstanding fuel efficiency, making it the perfect choice for city and highway driving.
+        </p>
+        <p class="new-cars-para2">
+            With its comfortable interior and modern safety features, the Elantra delivers a smooth and enjoyable driving experience for every journey.
+        </p>
+											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
+												view details
+											</button>
+										</div><!--/.new-cars-txt-->	
+									</div><!--/.col-->
+								</div><!--/.row-->
+							</div><!--/.single-new-cars-item-->
+						</div><!--/.new-cars-item-->
+					</div><!--/#new-cars-carousel-->
+				</div><!--/.new-cars-content-->
+			</div><!--/.container-->
+
+		</section><!--/.new-cars-->
+		<!--new-cars end -->
+
+		<!--featured-cars start -->
+		<section id="featured-cars" class="featured-cars">
+			<div class="container">
+				<div class="section-header">
+					
+					<h2>featured cars</h2>
+				</div><!--/.section-header-->
+				<div class="featured-cars-content">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc1.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											Model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											Automatic
+										</p>
+										</div>
+										</div>
+										<div class="featured-cars-txt">
+											<h2><a href="#">Kia Stinger</a></h2>
+											<h3>18022 uSD</h3>
+											<p>
+												Experience the perfect blend of performance and style with the Kia Stinger, offering a dynamic driving experience, premium features, and a sleek design.
+											</p>
+										
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc2.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">Nissan Altima</a></h2>
+    <h3>16827 USD</h3>
+    <p>
+        Experience the perfect blend of performance and comfort with the Nissan Altima. With its sleek design, advanced technology, and reliable efficiency, it's built for the road ahead.
+    </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc3.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">lamborghini <span>v520</span></a></h2>
+									<h3>125250 USD</h3>
+									<p>
+										Experience the thrill of pure performance with the Lamborghini V520. Designed for speed and luxury, this masterpiece features a powerful engine, aerodynamic design, and cutting-edge technology, delivering an unmatched driving experience.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc4.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">audi <span> a3</span> sedan</a></h2>
+									<h3>95500 USD</h3>
+									<p>
+										The Audi A3 Sedan offers a perfect combination of elegance and performance. With its refined design, cutting-edge technology, and luxurious features, it’s the ideal choice for those seeking a premium driving experience. 
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc5.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">infiniti <span>z5</span></a></h2>
+									<h3>36850 USD</h3>
+									<p>
+										The Infiniti Z5 is the epitome of luxury and performance, blending a sleek design with powerful engineering. Equipped with cutting-edge technology and a turbocharged engine, the Z5 offers an exhilarating driving experience while maintaining comfort and sophistication. 
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc6.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">porsche <span>718</span> cayman</a></h2>
+									<h3>48500 USD</h3>
+									<p>
+										The Porsche 718 Cayman is a dynamic sports car that combines precision engineering with breathtaking performance. With a mid-mounted engine, it delivers exceptional handling and power, making it perfect for both everyday driving and thrilling track days. 
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc7.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#"><span>bmw 8-</span>series coupe</a></h2>
+									<h3>56000 USD</h3>
+									<p>
+										The BMW 8-Series Coupe represents the epitome of performance and luxury, offering an unparalleled driving experience. With its powerful engine, sleek design, and advanced technology, the 8-Series Coupe combines elegance and speed.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="/static/images/featured-cars/fc8.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+										<p>
+											model: 2025
+											<span class="featured-mi-span"> 3100 mi</span> 
+											<span class="featured-hp-span"> 240HP</span>
+											 automatic
+										</p>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h2><a href="#">BMW <span> x</span>series-6</a></h2>
+									<h3>75800 USD</h3>
+									<p>
+										The BMW 6 Series Gran Coupe combines the allure of a luxury coupe with the functionality of a sedan. With a striking exterior design and a spacious interior, it offers a perfect blend of performance and comfort. 
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.featured-cars-->
+		<!--featured-cars end -->
+
+		
+
+		<!--brand strat -->
+		<section id="brand"  class="brand">
+			<div class="container">
+				<div class="brand-area">
+					<div class="owl-carousel owl-theme brand-item">
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br1.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br2.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br3.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br4.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br5.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="/static/images/brand/br6.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+					</div><!--/.owl-carousel-->
+				</div><!--/.clients-area-->
+
+			</div><!--/.container-->
+
+		</section><!--/brand-->	
+		<!--brand end -->
+
+		<!--blog start -->
+		<section id="blog" class="blog"></section><!--/.blog-->
+		<!--blog end -->
+
+	<!--contact start-->
+<footer id="contact" class="contact">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="footer-logo">
+                            <img src="/static/images/icons/homelogo.png" alt="Logo" width="80" height="60">
+                        </div>
+                        <p>
+                            Welcome to our Car Price Prediction System powered by Machine Learning! Get accurate and quick price predictions for your car based on various parameters.
+                        </p>
+                        
+                        <div class="footer-contact">
+                            <p>Email: info@carpredictor.com</p>
+                            <p>Phone: +1 800 123 4567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>Opening Hours</h2>
+<ul>
+    <li>Monday - Friday: 9:00 AM - 6:00 PM</li><br>
+    <li>Saturday: 10:00 AM - 4:00 PM</li><br>
+    <li>Sunday: Closed</li>
+</ul>
+
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <div class="single-footer-widget">
+                        <h2>Popular Car Brands</h2>
+                        <div class="row">
+                            <div class="col-md-7 col-xs-6">
+                                <ul>
+                                    <li>BMW</li><br>
+                                    <li>Mercedes-Benz</li><br>
+                                    <li>Audi</li><br>
+                                    <li>Toyota</li><br>
+                                    <li>Nissan</li><br>
+                                    <li>Lamborghini</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 col-xs-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>Car Price Insights</h2>
+                        <p>Explore insights about car pricing trends, market analysis, and factors that influence car prices in today's market.</p>
+                        <ul>
+                            <li>Car Price Trends 2025</li>
+                            <li>Factors Affecting Car Prices</li>
+                            <li>How Depreciation Impacts Your Car's Value</li>
+                            <li>The Best Time to Sell Your Car</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        &copy; 2025 Car Price Prediction System. Designed and developed by Shadshi.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="footer-social">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/contact end-->
+
+
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.contact-->
+		<!--contact end-->
+
+
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        
+        <!--bootstrap.min.js-->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        
+        <!-- bootsnav js -->
+        <script src="{{ url_for('static', filename='js/bootsnav.js') }}"></script>
+
+        <!--owl.carousel.js-->
+        <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!--Custom JS-->
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+        
+    </body>
+	
+</html>

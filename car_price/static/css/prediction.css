@@ -1,0 +1,144 @@
+/* Base styles */
+body {
+    background: url('/static/images/new-cars-model/predict.jpg');
+    background-size: cover;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for container */
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #7900bf;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Question styling */
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+/* Button styling */
+.btn {
+    background: linear-gradient(135deg, #7900bf, #D16587);
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #D16587, #7900bf);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Margin for button */
+.mt-3 {
+    margin-top: 20px;
+}
+
+/* Prediction result */
+#prediction-result {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease-out;
+}
+
+#prediction-result.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#prediction-result h3 {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 15px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Input fields and dropdowns */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #7900bf;
+    outline: none;
+    box-shadow: 0 0 8px #7900bf;
+}
+
+/* Style for select box options */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('https://cdn.iconscout.com/icon/free/png-256/down-arrow-34-459497.png');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+
+/* Footer or additional section */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 40px;
+}
+
+/* Zoom-In Animation */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
